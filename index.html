@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tika & Johan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Tika & Johan Wedding Invitation" />
+	<link rel="icon" type="image/x-icon" href="images/free-heart-icon-431-thumb.png">
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+
+
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		.montserrat-123 {
+			font-family: "Lobster", sans-serif !important;
+			color: #d3d9e7;
+			padding-top: 10px;
+			font-size: medium;
+			font-style: normal;
+		}
+
+		.to-container {
+			margin-top: 20px;
+			border-radius: 12px;
+			min-height: 85px;
+			background-color: rgb(60 75 108 / 59%);
+		}
+
+		.swal-to-container {
+			/* margin-top: 600px; */
+			border-radius: 12px;
+			min-height: 85px;
+			max-width: 300px;
+			background-color: rgb(60 75 108 / 59%);
+
+			/* width: 300px; */
+			margin: 0 auto;
+			/* padding: 20px; */
+		}
+
+		.pop-up-header-4 {
+			/* "Sacramento", Arial, serif */
+			/* "Brush Script MT", cursive */
+			font-family: "Sacramento", Arial, serif;
+			color: #ffffff;
+			font-size: 1.3em;
+			/* font-weight: 800; */
+		}
+
+		.pop-up-header-3 {
+			/* "Sacramento", Arial, serif */
+			/* "Brush Script MT", cursive */
+			font-family: Arial, Helvetica, sans-serif;
+			color: #4a6197;
+			font-size: 1.2em !important;
+			font-weight: 800;
+		}
+
+		.pop-up-header-2 {
+			/* "Sacramento", Arial, serif */
+			/* "Brush Script MT", cursive */
+			font-family: "Sacramento", Arial, serif;
+			color: #3c4b6c;
+			font-size: 3.5em;
+			font-weight: 800;
+		}
+
+		.pop-up-header-1 {
+			/* "Sacramento", Arial, serif */
+			/* "Brush Script MT", cursive */
+			font-family: "Sacramento", Arial, serif;
+			color: #3c4b6c;
+			font-size: 4em;
+			font-weight: 1000;
+		}
+
+		.swal2-container {
+			background-size: cover !important;
+			background-position: center -500px !important;
+			/* Default untuk layar yang lebih besar */
+		}
+
+		/* Media query untuk layar dengan lebar maksimal 768px (umumnya untuk perangkat mobile) */
+		@media (max-width: 768px) {
+			.swal2-container {
+				background-position: center center !important;
+				/* Untuk perangkat mobile */
+			}
+
+			.pop-up-header-2 {
+				font-size: 2.5em;
+			}
+
+			.pop-up-header-2 {
+				font-size: 2.5em;
+			}
+
+			.swal-to-container {
+				margin-top: 200px;
+				border-radius: 12px;
+				min-height: 85px;
+				background-color: rgb(60 75 108 / 59%);
+			}
+
+		}
+
+
+		.swal2-popup {
+			background-size: cover;
+			background-position: center;
+		}
+
+		.swal2-custom {
+			/* background-image: url('./images/tj-01.jpeg') !important; */
+			height: 100% !important;
+			background-size: contain !important;
+			background-repeat: no-repeat !important;
+			background-position: center !important;
+		}
+
+		.swal2-circular-button {
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 60px;
+			/* Diameter lingkaran */
+			height: 60px;
+			/* Diameter lingkaran */
+			border-radius: 50%;
+			/* Membuat bentuk lingkaran */
+			background-color: #4CAF50;
+			/* Warna latar belakang */
+			color: white;
+			font-size: 24px;
+			/* Ukuran ikon */
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			padding: 0;
+			/* Pastikan tidak ada padding tambahan */
+		}
+
+		.swal2-circular-button:hover {
+			background-color: #45a049;
+			/* Warna saat di-hover */
+		}
+
+		/* Wrapper dengan overflow scroll */
+		.scroll-box {
+			max-height: 400px;
+			overflow-y: auto;
+			background-color: #f9f9f9;
+		}
+
+		/* Warna dan ukuran scrollbar */
+		.scroll-box::-webkit-scrollbar {
+			width: 8px;
+			/* Lebar scrollbar */
+		}
+
+		/* Background track scrollbar */
+		.scroll-box::-webkit-scrollbar-track {
+			background: #e0e0e0;
+			border-radius: 10px;
+		}
+
+		/* Gaya thumb scrollbar */
+		.scroll-box::-webkit-scrollbar-thumb {
+			background: linear-gradient(180deg, #ffdbeb, #ffbad8);
+			/* Warna gradien */
+			border-radius: 10px;
+		}
+
+		/* Hover effect pada thumb scrollbar */
+		.scroll-box::-webkit-scrollbar-thumb:hover {
+			background: linear-gradient(180deg, #ffbad8, #e03c83);
+		}
+	</style>
+
+</head>
+
+<body>
+	<audio id="myAudio" loop>
+		<source src="mp3/Nyoman Paul Andi Rianto – The Way You Look At Me 1.mp3" type="audio/mpeg">
+		Browser Anda tidak mendukung pemutar audio.
+	</audio>
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+		<!-- <nav class="fh5co-nav" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">Story</a></li>
+							<li class="has-dropdown">
+								<a href="services.html">Services</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="gallery.html">Gallery</a>
+								<ul class="dropdown">
+									<li><a href="#">HTML5</a></li>
+									<li><a href="#">CSS3</a></li>
+									<li><a href="#">Sass</a></li>
+									<li><a href="#">jQuery</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</nav> -->
+
+		<header id="fh5co-header" class="fh5co-cover" role="banner"
+			style="background-image:url(images/tj-0100-min.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t">
+							<div class="display-tc animate-box" data-animate-effect="fadeIn">
+								<h1>Tika &amp; Johan</h1>
+								<h2>Mengundang Anda Untuk Merayakan Pernikahan Kami</h2>
+								<div class="simply-countdown simply-countdown-one"></div>
+								<div class="to-container">
+									<p class="pop-up-header-4">
+										Menuju &nbsp; hari &nbsp; bahagia
+										<br>
+										16 &nbsp; November &nbsp; 2024
+									</p>
+								</div>
+								<!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="fh5co-couple">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<h2>Assalamu'alaikum Wr. Wb.</h2>
+						<h3>Kepada Bpk/Ibu/Saudara/i</h3>
+						<h3 style="font-weight: bold; color: #e03c83;" id="invited-guests"></h3>
+						<h3>Bismillahirrahmanirrahim</h3>
+						<p>Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian
+							untuk
+							menghadiri acara resepsi pernikahan kami:</p>
+					</div>
+				</div>
+				<div class="couple-wrap animate-box">
+					<div class="couple-half">
+						<div class="groom">
+							<img src="images/tj-0012.jpeg" alt="groom" class="img-responsive">
+						</div>
+						<div class="desc-groom">
+							<h3>Tika Sriwidadi</h3>
+							<p>Putri pertama dari Bapak Dede Wawan Widadi & Ibu Lilis Suhamina</p>
+						</div>
+					</div>
+					<p class="heart text-center"><i class="icon-heart2"></i></p>
+					<div class="couple-half">
+						<div class="bride">
+							<img src="images/tj-002.jpeg" alt="groom" class="img-responsive">
+						</div>
+						<div class="desc-bride">
+							<h3>Johan Iswanto</h3>
+							<p>Putra kedua dari Bapak Lili Setiawan (alm) & Ibu Dedeh Winengsih (almh)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/tj-08.jpeg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<span>Momen Spesial Kami</span>
+						<h2>Wedding Events</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="display-t">
+						<div class="display-tc">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="col-md-6 col-sm-6 text-center">
+									<div class="event-wrap animate-box">
+										<h3>Akad Nikah</h3>
+										<div class="event-col">
+											<i class="icon-clock"></i>
+											<span>08:00</span>
+										</div>
+										<div class="event-col">
+											<i class="icon-calendar"></i>
+											<span>Sabtu, 16</span>
+											<span>November 2024</span>
+										</div>
+										<p>Bertempat di : Gedung HBS Cimareme
+											Jl. Pertigaan Cimareme No. 256 Kab. Bandung Barat.
+										</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 text-center">
+									<div class="event-wrap animate-box">
+										<h3>Resepsi</h3>
+										<div class="event-col">
+											<i class="icon-clock"></i>
+											<span>11:00 s/d 14:00</span>
+										</div>
+										<div class="event-col">
+											<i class="icon-calendar"></i>
+											<span>Sabtu, 16</span>
+											<span>November 2024</span>
+										</div>
+										<p>Bertempat di : Gedung HBS Cimareme
+											Jl. Pertigaan Cimareme No. 256 Kab. Bandung Barat.
+										</p>
+										<p>
+											<a href="https://maps.app.goo.gl/uwgHHKxbPDkSPJJp9"
+												class="btn btn-default btn-sm">
+												<i class="icon-pin" style="color: #F14E95;"></i>
+												Location
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-couple-story">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>We Love Each Other</span>
+					<h2>Our Story</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline animate-box">
+						<li class="animate-box">
+							<div class="timeline-badge" style="background-image:url(images/icon-first-meet.png);"></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Pertemuan</h3>
+									<!-- <span class="date">December 25, 2015</span> -->
+								</div>
+								<div class="timeline-body">
+									<p>Pada pertengahan tahun 2023 kami pertama kali bertemu di tempat yang menjadi
+										saksi perjalanan kami, yang awalnya kami tidak saling mengenal satu sama lain,
+										hanya saling melemparkan senyuman dari jarak jauh.
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge" style="background-image:url(images/icon-love-message.png);">
+							</div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Pendekatan</h3>
+									<!-- <span class="date">December 28, 2015</span> -->
+								</div>
+								<div class="timeline-body">
+									<p>Beberapa pekerjaan yg dilalui bersama membuat Takdir baik di perjalanan kami,
+										komunikasi yang terjalin membawa kami ke titik arah kenyamanan pada diri
+										masing-masing hingga semakin dekat dan memiliki tujuan yang sama.
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="animate-box">
+							<div class="timeline-badge" style="background-image:url(images/icon-love-finger.png);">
+							</div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Menjalin hubungan</h3>
+									<!-- <span class="date">January 1, 2016</span> -->
+								</div>
+								<div class="timeline-body">
+									<p>Memutuskan untuk bersama di awal tahun 2024 adalah bagian dari perjalanan kisah
+										kami hingga kami sepakat untuk melangkah ke arah yg lebih serius. Hari demi hari
+										kami lalui, hingga saat pertemuan antar keluarga pun terjadi untuk mengukuhkan
+										perencanaan hari baik kami pada Bulan September 2024.
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge" style="background-image:url(images/icon-love-engage.png);">
+							</div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Menikah</h3>
+									<span class="date">November 16, 2024</span>
+								</div>
+								<div class="timeline-body">
+									<p>Tanggal 16 November 2024 akan menjadi langkah baru bagi kami untuk membina
+										bahtera rumah tangga. Dengan keyakinan dan kepercayaan bahwa inilah Takdir yg
+										Tuhan anugerahkan. Kami sepakat untuk mengikat janji suci dalam biduk
+										pernikahan.
+									</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-gallery" class="fh5co-section-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Our Memories</span>
+					<h2>Wedding Gallery</h2>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-12">
+					<ul id="fh5co-gallery-list">
+
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-02.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-07.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-03.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-04.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-11.JPG); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-06.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-12.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-05.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn"
+							style="background-image: url(images/tj-10.jpeg); ">
+							<a href="#fh5co-gallery" class="color-2">
+								<div class="case-studies-summary"> </div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/tj-06.jpeg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class=" animate-box">
+							<div class="feature-center">
+								<span class="mt-4">
+									<br>
+									<br>
+									<br>
+									<br>
+									<h4 style="color: white;">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ
+										اَزْوَاجًا
+										لِّتَسْكُنُوْٓا اِلَيْهَا
+										وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ
+										يَّتَفَكَّرُوْنَ
+									</h4>
+									<p style="color: white;">“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+										menciptakan
+										pasangan-pasangan untukmu
+										dari
+										jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
+										menjadikan di
+										antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar
+										terdapat
+										tanda-tanda
+										(kebesaran Allah) bagi kaum yang berpikir. “</p>
+									<p style="color: white;">(Q.S. Ar-Rum : 21)</p>
+								</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-testimonial">
+		<div class="container">
+			<div class="row">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<span>Best Wishes</span>
+						<h2>Friends Wishes</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 animate-box">
+						<div class="wrap-testimony">
+							<div class="owl-carousel-fullwidth scroll-box" id="prayParent">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/tj-12.jpeg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Ucapan Selamat & Do'a</h2>
+					<p>Berikan Ucapan Terbaik Untuk kedua Mempelai</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-10 col-md-offset-1">
+					<form class="form-inline">
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="name" class="sr-only">Nama</label>
+								<input required type="name" class="form-control" id="prayName" placeholder="Nama">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="email" class="sr-only">Ucapan</label>
+								<input required style="min-height: 150px;" class="form-control" id="prayText"
+									placeholder="Ucapan">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<button id="saveNewPray" type="button" class="btn btn-default btn-block">Simpan</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-services" class="fh5co-section-gray">
+		<div class="container">
+
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Wedding Gift</h2>
+					<p>Bagi keluarga, sahabat dan rekan yang ingin memberikan hadiah dapat melalui tautan berikut ini :
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading ">
+					<div class="card animate-box " data-animate-effect="fadeInLeft">
+						<img src="images/logo-bca.png" alt="bca" class="mb-2" width="200px" class="img-responsive">
+						<div class="">
+							<br>
+							<h3>2780621373<h3>
+									<p>a.n Tika Sriwidadi</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2016 Wedding. All Rights Reserved.</small>
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">Wedding.com</a>
+						</small>
+					</p>
+					<p>
+					<ul class="fh5co-social-icons">
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon-dribbble"></i></a></li>
+					</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- SWALL 2 -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script>
+		function getQueryParam(param) {
+			const urlParams = new URLSearchParams(window.location.search);
+			return urlParams.get(param);
+		}
+
+		const heading = document.getElementById('invited-guests');
+		if (heading) {
+			heading.textContent = getQueryParam("to"); // Atau gunakan innerHTML jika ingin memuat HTML
+		}
+
+		Swal.fire({
+			// imageUrl: `./images/img_bg_1.jpg`, Kepada Bapak/Ibu/Saudara/i
+			html: `<h2 class="pop-up-header-2">Undangan Pernikahan</h2>
+					<h1 class="pop-up-header-1">Tika &amp; Johan</h1>
+				 
+					<div class="swal-to-container">
+						<h2 class="montserrat-123">Kepada Bapak/Ibu/Saudara/i : </h2>
+						<h2 class="montserrat-123">`+ getQueryParam("to") + `</h2>
+					</div>
+			`,
+			confirmButtonText: `BUKA UNDANGAN`,
+			confirmButtonColor: "#F14E95",
+			width: "100%",
+			height: "200%",
+			padding: "3em",
+			color: "#716add",
+			background: "rgb(184 184 255 / 0%)",
+			customClass: {
+				popup: 'swal2-custom',
+				confirmButton: 'btn-lg'
+			},
+			didClose: () => {
+				const audio = document.getElementById('myAudio');
+				if (audio.paused) {
+					audio.play();
+				}
+			},
+			backdrop: `url("images/tj-04.jpeg")`,
+			position: "top"
+		});
+	</script>
+
+	<script>
+		var d = new Date("2024-11-16");
+
+		// default example
+		simplyCountdown('.simply-countdown-one', {
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate()
+		});
+
+		//jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate(),
+			enableUtc: false
+		});
+	</script>
+	<script>
+		// document.addEventListener('click', function () {
+		// 	const audio = document.getElementById('myAudio');
+		// 	if (audio.paused) {
+		// 		audio.play();
+		// 	}
+		// });
+	</script>
+
+	<script type="module">
+
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+		import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+			apiKey: "AIzaSyDYwJNUw6jN8tgUBBlsaKv3Ontgn88hhek",
+			authDomain: "tika-johan.firebaseapp.com",
+			projectId: "tika-johan",
+			storageBucket: "tika-johan.firebasestorage.app",
+			messagingSenderId: "14981637064",
+			appId: "1:14981637064:web:3fb2a9a4d8b414c92f16fd",
+			measurementId: "G-MD6MW9W6EH"
+		};
+
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		// const analytics = firebase.getAnalytics(app);
+		const db = getDatabase(app);
+
+		const keyPray = "pray"
+		const objPray = {
+			name: "",
+			pray: ""
+		}
+		document.getElementById("saveNewPray").addEventListener("click", savePray);
+
+		// Fungsi untuk menyimpan data
+		function savePray() {
+
+			const prayName = document.getElementById("prayName");
+			const prayText = document.getElementById("prayText");
+
+			objPray.name = prayName.value;
+			objPray.pray = prayText.value;
+
+			if (objPray.name.trim() != "" && objPray.pray.trim() != "") {
+
+				console.log({ objPray })
+
+				set(ref(db, keyPray + "/" + generateRandomString()), objPray).then(() => {
+					console.log("Data berhasil disimpan!");
+				}).catch((error) => {
+					console.error("Error menyimpan data: ", error);
+				});
+				prayName.value = "";
+				prayText.value = "";
+
+				var htmlItems = `<div class="item"><br><div class="testimony-slide active text-center"><figure><img src="images/` + getIconLove() + `" alt="user"></figure><span>` + objPray.name + `</span><blockquote><p>"` + objPray.pray + `"</p></blockquote></div></div>`;
+				const prayParent = document.getElementById("prayParent");
+
+				prayParent.innerHTML += htmlItems
+
+			}
+		}
+
+		function getIconLove() {
+			const iconsLove = ["loves1.jpg", "loves2.jpg", "loves3.jpg", "loves4.jpg", "loves5.jpg",];
+			const randomItem = iconsLove[Math.floor(Math.random() * iconsLove.length)];
+			return randomItem
+		}
+
+		// Fungsi untuk mengambil data
+		function getPray() {
+			const dbRef = ref(db, keyPray);
+			get(dbRef)
+				.then((snapshot) => {
+					if (snapshot.exists()) {
+						var htmlItems = ""
+						for (const key in snapshot.val()) {
+							if (Object.prototype.hasOwnProperty.call(snapshot.val(), key)) {
+								const element = snapshot.val()[key];
+								htmlItems += `<div class="item"><br><div class="testimony-slide active text-center"><figure><img src="images/` + getIconLove() + `" alt="user"></figure><span>` + element.name + `</span><blockquote><p>"` + element.pray + `"</p></blockquote></div></div>`;
+
+							}
+						}
+						const prayParent = document.getElementById("prayParent");
+
+						prayParent.innerHTML = htmlItems
+						// console.log("Data users:", snapshot.val()); // Menampilkan semua data di node 'users'
+					} else {
+						console.log("Tidak ada data di path " + keyPray);
+					}
+				})
+				.catch((error) => {
+					console.error("Error mengambil data:", error);
+				});
+
+		}
+
+		function generateRandomString() {
+			const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+			let result = '';
+			for (let i = 0; i < 8; i++) {
+				result += chars.charAt(Math.floor(Math.random() * chars.length));
+			}
+			return result;
+		}
+
+		// Panggil fungsi untuk tes
+		// savePray();
+		document.addEventListener("DOMContentLoaded", async function () {
+			getPray();
+		});
+	</script>
+</body>
+
+</html>
