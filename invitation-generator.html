@@ -139,7 +139,7 @@
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h1>Tika & Johan</h1>
+                                <h1>Atina & Ade</h1>
                                 <h2>Invitation Generator
                                 </h2>
                             </div>
@@ -225,7 +225,7 @@
                 <div class="row copyright">
                     <div class="col-md-12 text-center">
                         <p>
-                            <small class="block">&copy; 2024 Wedding. All Rights Reserved.</small>
+                            <small class="block">&copy; 2025 Wedding. All Rights Reserved.</small>
                             <small class="block">Designed by <a href="http://freehtml5.co/"
                                     target="_blank">Wedding.co</a> </small>
                         </p>
@@ -288,9 +288,9 @@
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
             apiKey: "AIzaSyDYwJNUw6jN8tgUBBlsaKv3Ontgn88hhek",
-            authDomain: "tika-johan.firebaseapp.com",
-            projectId: "tika-johan",
-            storageBucket: "tika-johan.firebasestorage.app",
+            authDomain: "atina-ade.firebaseapp.com",
+            projectId: "atina-ade",
+            storageBucket: "atina-ade.firebasestorage.app",
             messagingSenderId: "14981637064",
             appId: "1:14981637064:web:3fb2a9a4d8b414c92f16fd",
             measurementId: "G-MD6MW9W6EH"
@@ -305,11 +305,11 @@
 
 Dengan penuh rasa hormat, kami mengundang Bapak/Ibu/Saudara/i {{NamaTamuUndangan}} untuk hadir dan memberikan doa restu pada acara pernikahan kami.
 
-👰‍♀️ Tika Sriwidadi
-Putri pertama dari Bapak Dede Wawan Widadi & Ibu Lilis Suhamina
+👰‍♀️ Atina Sukriyanti
+Putri pertama dari Bapak Mustika (Alm.Yusma) & Ibu Yanti
 
-🤵‍♂️ Johan Iswanto
-Putra kedua dari Bapak Lili Setiawan (alm) & Ibu Dedeh Winengsih (almh)
+🤵‍♂️ Ade Sanggara Saputra
+Putra kedua dari Bapak Jaenudin & Ibu Mutoharoh
 
 Kami sangat mengharapkan kehadiran dan doa restu dari Bapak/Ibu/Saudara/i, agar acara pernikahan kami menjadi lebih berkesan.
 
@@ -319,15 +319,15 @@ Terima kasih atas perhatian dan doa restunya.
 
 Wassalamu'alaikum Warahmatullahi Wabarakatuh.
 
-💖 Tika & Johan 💖`
+💖 Atina & Ade 💖`
         var totalReceivers = 0
 
         const messageBox = document.getElementById("messageBox");
         const receiversBox = document.getElementById("receiversBox");
 
 
-        const keyMessageBox = "messageBox/current"
-        const keyReceiverBox = "receiversBox"
+        const keyMessageBox = "aa-messageBox/current"
+        const keyReceiverBox = "aa-receiversBox"
 
         document.getElementById("btnSaveMessageBox").addEventListener("click", saveMessageBox);
         document.getElementById("btnReceiversBox").addEventListener("click", saveReceiversBox);
@@ -519,7 +519,7 @@ Wassalamu'alaikum Warahmatullahi Wabarakatuh.
             // {{URL}}
             var res = messageBox.value
             res = res.replace(/{{NamaTamuUndangan}}/g, name);
-            res = res.replace(/{{URL}}/g, "https://tika-johan.github.io/wedding-invitation/?to=" + encodeURIComponent(name));
+            res = res.replace(/{{URL}}/g, "https://atina-ade.github.io/wedding-invitation/?to=" + encodeURIComponent(name));
             console.log({ res })
             return res
         }
